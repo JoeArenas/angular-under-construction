@@ -1,5 +1,8 @@
 # UnderConstruction
 
+This project deploys a simple under construction angular 18 standalone (module-less) template with SSR. It uses docker and caprover service to deploy and includes header meta tags and robots txt file to
+avoid search engines indexation while your angular site is still under construction. [Here](https://codengine.cl) you can see the deployed website.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 
 ## Development server
