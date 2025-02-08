@@ -1,4 +1,4 @@
-FROM node:hydrogen-alpine3.20 as build
+FROM node:hydrogen-alpine3.20 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --legacy-peer-deps
@@ -9,7 +9,7 @@ FROM node:hydrogen-alpine3.20
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package*.json ./
-ENV NODE_ENV production
-ENV PORT 80
+ENV NODE_ENV=production
+ENV PORT=80
 EXPOSE 80
 CMD ["npm", "start"]
